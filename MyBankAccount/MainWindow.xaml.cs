@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +23,8 @@ namespace MyBankAccount
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        public string ConnectionString;
+        public SqlDataAdapter adapter;
         BankAcc bankAcc = new BankAcc();
 
 
@@ -32,9 +35,7 @@ namespace MyBankAccount
         public MainWindow()
         {
             InitializeComponent();
-
-            
-            
+            ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         }
 
         public void SetContentFromAccount()
