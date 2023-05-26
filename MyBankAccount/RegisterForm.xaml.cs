@@ -18,6 +18,9 @@ namespace MyBankAccount
     /// </summary>
     public partial class RegisterForm : Window
     {
+        
+        
+        
         public RegisterForm()
         {
             InitializeComponent();
@@ -25,8 +28,16 @@ namespace MyBankAccount
 
         private void AddNew_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainW = new MainWindow();
+            string con = mainW.ConnectionString;
+
             if (fName.Text != "" && lName.Text != "" && Phone.Text != "" && EMail.Text != "" && TypeOfCustomer.Text != "" && UserLogin.Text != "" && UserPassword.Text != "")
             {
+                Registration reg = new Registration();
+                reg.RegisterNewAccount(con, fName.Text, lName.Text, Phone.Text, EMail.Text, UserLogin.Text, UserPassword.Text, TypeOfCustomer.Text);
+
+
+
                 MessageBox.Show("You are done!!!", "Ok");
             }
             else

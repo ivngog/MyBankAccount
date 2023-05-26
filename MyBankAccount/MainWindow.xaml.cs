@@ -26,6 +26,7 @@ namespace MyBankAccount
         public string ConnectionString;
         public SqlDataAdapter adapter;
         BankAcc bankAcc = new BankAcc();
+        Registration registr = new Registration();
 
 
         public enum TypeOfCustomer
@@ -36,6 +37,7 @@ namespace MyBankAccount
         {
             InitializeComponent();
             ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            
         }
 
         public void SetContentFromAccount()
@@ -54,6 +56,10 @@ namespace MyBankAccount
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             SetContentFromAccount();
+            registr.RegisterDate = DateTime.Now;
+
+
+            MessageBox.Show(Convert.ToString(registr.RegisterDate));
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)

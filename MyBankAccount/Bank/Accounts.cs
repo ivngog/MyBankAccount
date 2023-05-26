@@ -24,7 +24,7 @@ namespace MyBankAccount.Bank
         public decimal Interest { get; protected set; }
         
         public DateTime ContractBeginDate { get; set; }
-        public DateTime DateOfOpenAcc { get; set; }
+        
 
 
         private static readonly Random _random = new Random();
@@ -34,6 +34,8 @@ namespace MyBankAccount.Bank
 
         public abstract decimal CalculateInterest();
         public abstract decimal AccruedInterest();
+
+        
 
     }
 }

@@ -48,6 +48,7 @@
         <TextBox x:Name="UserPassword" Grid.Row="7" Grid.Column="1" Width="184" Height="25" HorizontalAlignment="Left" Margin="15,0,0,0" Text="*"/>
 
         <Button x:Name="AddNew" Grid.Row="8" Grid.Column="1" Content="Add new" Background="WhiteSmoke" Width="150" Height="30" HorizontalAlignment="Left" Margin="48,0,0,0" Click="AddNew_Click" />
+        <Label Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="167,75,0,0" Grid.Row="9" VerticalAlignment="Top"/>
 
 
     </Grid>
