@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MyBankAccount.Bank;
+using MyBankAccount.Users;
 
 namespace MyBankAccount
 {
@@ -35,8 +36,6 @@ namespace MyBankAccount
             {
                 Registration reg = new Registration();
                 reg.RegisterNewAccount(con, fName.Text, lName.Text, Phone.Text, EMail.Text, UserLogin.Text, UserPassword.Text, TypeOfCustomer.Text);
-
-
 
                 MessageBox.Show("You are done!!!", "Ok");
             }

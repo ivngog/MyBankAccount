@@ -117,7 +117,7 @@ namespace MyBankAccount {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MyBankAccount;V1.0.0.0;component/registerform.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MyBankAccount;component/registerform.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\RegisterForm.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

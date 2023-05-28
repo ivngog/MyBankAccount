@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Linq;
@@ -15,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MyBankAccount.Bank;
+using MyBankAccount.Users;
 
 namespace MyBankAccount
 {
@@ -27,6 +29,9 @@ namespace MyBankAccount
         public SqlDataAdapter adapter;
         BankAcc bankAcc = new BankAcc();
         Registration registr = new Registration();
+        Authorization authorization = new Authorization();
+        
+        private SqlConnection _sqlConnection = null;
 
 
         public enum TypeOfCustomer
@@ -55,11 +60,12 @@ namespace MyBankAccount
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            SetContentFromAccount();
-            registr.RegisterDate = DateTime.Now;
-
-
-            MessageBox.Show(Convert.ToString(registr.RegisterDate));
+            
+            authorization.AuthorizeToAccount(ConnectionString, UserName.Text, Password.Text);
+            if(authorization.OpenWindow = true)
+            {
+                SetContentFromAccount();
+            }
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)
