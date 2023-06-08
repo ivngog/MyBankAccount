@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 F:\Portfolio\MyBankAccount\MyBankAccount\App.xaml
-31090679857
+4-204839447
 
-14-2106140500
+18-175969001
 1931079081374
-BankAcc.xaml;MainWindow.xaml;RegisterForm.xaml;
+AddContract.xaml;BankAcc.xaml;MainWindow.xaml;RegisterForm.xaml;
 
-False
+True
 

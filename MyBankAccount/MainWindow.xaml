@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyBankAccount"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="581" ResizeMode="NoResize">
+        Title="MainWindow" Height="450" Width="581" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+          >
+    
     <DockPanel>
         <DockPanel.Resources>
             <Style TargetType="{x:Type TextBlock}">
@@ -19,11 +21,11 @@
             </Style>
         </DockPanel.Resources>
 
-        <TabControl >
+        <TabControl>
             <TabItem x:Name="MainWin">
                 <TabItem.Header>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock x:Name="TB" Margin="3" Width="581" TextAlignment="Center">My Bank Account</TextBlock>
+                    <StackPanel Orientation="Horizontal" x:Name="MustBeHidden">
+                        <TextBlock x:Name="TB" Margin="0,0,0,0" Width="581" TextAlignment="Center" FlowDirection="LeftToRight" IsEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="0">My Bank Account</TextBlock>
                     </StackPanel>
                 </TabItem.Header>
 
@@ -42,9 +44,9 @@
                     <TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="Login" Margin="10" VerticalAlignment="Center" />
 
                     <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,7,0" FontSize="20" Content="User Name"/>
-                    <TextBox x:Name="UserName" Grid.Row="1" Grid.Column="2" Width="200" Height="30" HorizontalAlignment="Left" Margin="7, 0, 0, 0"/>
+                    <TextBox x:Name="UsrName" Grid.Row="1" Grid.Column="2" Width="200" Height="30" HorizontalAlignment="Left" Margin="7, 0, 0, 0"/>
                     <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,7,0" FontSize="20" Content="Password"/>
-                    <TextBox x:Name="Password" Grid.Row="2" Grid.Column="2" Width="200" Height="30" HorizontalAlignment="Left" Margin="7, 0, 0, 0"/>
+                    <TextBox x:Name="Pswrd" Grid.Row="2" Grid.Column="2" Width="200" Height="30" HorizontalAlignment="Left" Margin="7, 0, 0, 0"/>
                     <Button Name="Registration" Content="Register" Grid.Row="3" Grid.Column="0" Width="150" Height="35" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,7,0" Click="Registration_Click"/>
                     <Button Name="Login" Content="Login" Grid.Row="3" Grid.Column="1" Width="150" Height="35" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="54,0,0,0" Click="Login_Click" />
 

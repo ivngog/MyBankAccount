@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="BankAcc.xaml.cs">
+    <Compile Update="AddContract.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="RegisterForm.xaml.cs">
@@ -15,7 +15,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="BankAcc.xaml">
+    <Page Update="AddContract.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

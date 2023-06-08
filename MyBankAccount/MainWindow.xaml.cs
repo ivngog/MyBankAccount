@@ -25,28 +25,24 @@ namespace MyBankAccount
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string ConnectionString;
-        public SqlDataAdapter adapter;
-        BankAcc bankAcc = new BankAcc();
-        Registration registr = new Registration();
-        Authorization authorization = new Authorization();
         
-        private SqlConnection _sqlConnection = null;
+        
+        
+        
+        Authorization authorization = new Authorization();
 
-
-        public enum TypeOfCustomer
-        {
-            Individual, Company
-        }
+        
         public MainWindow()
         {
             InitializeComponent();
-            ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            //MustBeHidden.Visibility = Visibility.Collapsed;
+            
             
         }
 
-        public void SetContentFromAccount()
+        public void SetContentFromAccount(string username)
         {
+            BankAcc bankAcc = new BankAcc(username);
             MainWin.Content = bankAcc.Content;
         }
 
@@ -61,10 +57,11 @@ namespace MyBankAccount
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             
-            authorization.AuthorizeToAccount(ConnectionString, UserName.Text, Password.Text);
-            if(authorization.OpenWindow = true)
+            authorization.AuthorizeToAccount(UsrName.Text, Pswrd.Text);
+            if(authorization.OpenWindow == true)
             {
-                SetContentFromAccount();
+                
+                SetContentFromAccount(authorization.Username);
             }
         }
 

@@ -8,23 +8,25 @@ using System.Windows;
 
 namespace MyBankAccount.Users
 {
-    class Authorization:Registration
+    public class Authorization : Registration
     {
-        private SqlConnection _sqlConnection = null;
-        public bool OpenWindow { get; set; }
+
+        public bool OpenWindow;
+        public string Username;
         
-        public void AuthorizeToAccount(string ConnectionString, string userName, string password)
+        
+        public void AuthorizeToAccount(string userName, string password)
         {
             string query = @$"select UserName, Password from Customers where UserName = '" + userName + "' and password = '" + password + "'";
-            _sqlConnection = new SqlConnection(ConnectionString);
+            
 
             if (userName != string.Empty && password != string.Empty)
             {
                 try
                 {
-                    _sqlConnection.Open();
+                    
 
-
+                    OpenConnection();
                     using SqlCommand command = new SqlCommand(query, _sqlConnection)
                     {
                         CommandType = CommandType.Text
@@ -34,7 +36,11 @@ namespace MyBankAccount.Users
                     while (dataReader.Read()) { count += 1; }
                     if (count == 1)
                     {
+                        
                         OpenWindow = true;
+                        Username = userName;
+                        
+
                     }
                     else if (count > 0)
                     {
@@ -44,13 +50,12 @@ namespace MyBankAccount.Users
                     {
                         MessageBox.Show("Wrong login or password!");
                     }
-                    
 
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error", ex.Message);
+                    MessageBox.Show(ex.Message,"Error");
                 }
 
             }
@@ -59,6 +64,7 @@ namespace MyBankAccount.Users
                 MessageBox.Show("Empty");
             }
         }
+
 
     }
 }

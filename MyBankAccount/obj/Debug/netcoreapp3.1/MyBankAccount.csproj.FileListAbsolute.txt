@@ -18,8 +18,6 @@ F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\MyBankAccount.d
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\MyBankAccount.pdb
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\MyBankAccount.genruntimeconfig.cache
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\RegisterForm.g.cs
-F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\BankAcc.g.cs
-F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\BankAcc.baml
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\RegisterForm.baml
 F:\Portfolio\MyBankAccount\MyBankAccount\bin\Debug\netcoreapp3.1\MyBankAccount.dll.config
 F:\Portfolio\MyBankAccount\MyBankAccount\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
@@ -29,3 +27,8 @@ F:\Portfolio\MyBankAccount\MyBankAccount\bin\Debug\netcoreapp3.1\runtimes\win-x8
 F:\Portfolio\MyBankAccount\MyBankAccount\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 F:\Portfolio\MyBankAccount\MyBankAccount\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\MyBankAccount.csproj.CopyComplete
+F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\BankAcc.g.cs
+F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\BankAcc.baml
+F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\AddContract.g.cs
+F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\AddContract.baml
+F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\MyBankAccount.csproj.AssemblyReference.cache
