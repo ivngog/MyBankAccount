@@ -1,0 +1,51 @@
+﻿<Window x:Class="MyBankAccount.ShowMeContractOnTheWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyBankAccount"
+        mc:Ignorable="d"
+        Title="ShowContracts" Height="150" Width="150" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2.3*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        
+            <Label x:Name="Contract" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            <Label x:Name="begincontract"  Grid.Row="1" Grid.Column="0" Margin="15,0,0,0"/>
+            <Label x:Name="BeginDate" Grid.Row="1" Grid.Column="1"/>
+            <Label x:Name="balance"  Grid.Row="5" Grid.Column="0" Margin="15,0,0,0"/>
+            <Label x:Name="Balance" Grid.Row="5" Grid.Column="1"/>
+            <Label x:Name="interest" Grid.Row="3" Grid.Column="1"/>
+            
+            <Label x:Name="interestrate"  Grid.Row="3" Grid.Column="0" Margin="15,0,0,0"/>
+            <Label x:Name="total"  Grid.Row="2" Grid.Column="0" Margin="15,0,0,0"/>
+            <Label x:Name="Total" Grid.Row="2" Grid.Column="1"/>
+            <Label x:Name="withdrawal" Content="Withdrawals" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center"/>
+            <Label x:Name="Depositing" Content="Depositing" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center"/>
+            <ComboBox x:Name="Withdraw" Grid.Row="6" Grid.Column="0" VerticalAlignment="center" HorizontalAlignment="Center" Width="150">
+            <ComboBoxItem x:Name="AccountWidthr" Background="GreenYellow"/>
+        </ComboBox>
+        <ComboBox x:Name="Depoz" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150">
+            <ComboBoxItem x:Name="AccountDepos"  Background="GreenYellow"/>
+        </ComboBox>
+        <TextBox x:Name="WithdrowMoney" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" Width="150" PreviewTextInput="Withdraw_PreviewTeztInput"/>
+        <Button x:Name="Widthdr" Content="Withdrow" Grid.Row="8" Grid.Column="0" HorizontalAlignment="Center" Width="150" Margin="0,3,0,0" Click="WithrowingMoney_Click"/>
+        <TextBox x:Name="DepositingMoney" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" Width="150" PreviewTextInput="Depositing_PreviewTextInput"/>
+        <Button x:Name="Deposite" Content="Deposite" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" Width="150" Margin="0,3,0,0" Click="DepositeMoney_Click"/>
+
+    </Grid>
+</Window>

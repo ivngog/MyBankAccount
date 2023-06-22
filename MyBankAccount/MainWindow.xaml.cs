@@ -27,16 +27,12 @@ namespace MyBankAccount
     {
         
         
-        
-        
         Authorization authorization = new Authorization();
 
         
         public MainWindow()
         {
             InitializeComponent();
-            //MustBeHidden.Visibility = Visibility.Collapsed;
-            
             
         }
 
@@ -60,7 +56,6 @@ namespace MyBankAccount
             authorization.AuthorizeToAccount(UsrName.Text, Pswrd.Text);
             if(authorization.OpenWindow == true)
             {
-                
                 SetContentFromAccount(authorization.Username);
             }
         }

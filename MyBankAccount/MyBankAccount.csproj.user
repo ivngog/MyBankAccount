@@ -13,6 +13,9 @@
     <Compile Update="RegisterForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ShowMeContractOnTheWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AddContract.xaml">
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RegisterForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ShowMeContractOnTheWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

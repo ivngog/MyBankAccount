@@ -25,15 +25,15 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="2"  FontSize="25" HorizontalAlignment="Center">Add new customer</TextBlock>
         <Label Content="First Name:" Grid.Row="1" Grid.Column="0" Width="auto" Height="auto" Margin="15,0,0,0"/>
-        <TextBox x:Name="fName" Grid.Row="1" Grid.Column="1" Height="25" Width="184" HorizontalAlignment="Left" Margin="15,8,0,7" FontSize="14"/>
+        <TextBox x:Name="fName" Grid.Row="1" Grid.Column="1" Height="25" Width="184" HorizontalAlignment="Left" Margin="15,8,0,7" FontSize="14" PreviewTextInput="InputInitials"/>
         <Label Content="Last Name:" Grid.Row="2" Grid.Column="0" Width="auto" Height="auto" Margin="15,0,0,0"/>
-        <TextBox x:Name="lName" Grid.Row="2" Grid.Column="1" Height="25" Width="184" HorizontalAlignment="Left" Margin="15,7,0,7" FontSize="14"/>
+        <TextBox x:Name="lName" Grid.Row="2" Grid.Column="1" Height="25" Width="184" HorizontalAlignment="Left" Margin="15,7,0,7" FontSize="14" PreviewTextInput="InputInitials"/>
 
         <Label Content="Phone:" Grid.Row="3" Grid.Column="0" Margin="15,0,0,0"/>
-        <TextBox x:Name="Phone" Grid.Row="3" Grid.Column="1" Height="25" Width="184" HorizontalAlignment="Left" Margin="15,7,0,7" FontSize="14"/>
+        <TextBox x:Name="Phone" Grid.Row="3" Grid.Column="1" Height="25" Width="184" HorizontalAlignment="Left" Margin="15,7,0,7" FontSize="14" PreviewTextInput="TextBox_CheckTelephone"/>
 
         <Label Content="E-mail:" Grid.Row="4" Grid.Column="0" Margin="15,0,0,0"/>
-        <TextBox x:Name="EMail" Grid.Row="4" Grid.Column="1" Height="25" Width="184" HorizontalAlignment="Left" Margin="15,7,0,7" FontSize="14"/>
+        <TextBox x:Name="EMail" Grid.Row="4" Grid.Column="1" Height="25" Width="184" HorizontalAlignment="Left" Margin="15,7,0,7" FontSize="14" PreviewTextInput="CheckInputEmail"/>
 
         <Label Content="Type:" Grid.Row="5" Grid.Column="0" Width="Auto" Height="Auto" Margin="15,0,0,0"/>
         <ComboBox x:Name="TypeOfCustomer" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" Margin="15,8,0,7" Height="25" Width="184">

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -42,6 +43,22 @@ namespace MyBankAccount
             {
                 MessageBox.Show("Something went wrong!");
             }
+        }
+
+        private void InputInitials(object sender, TextCompositionEventArgs e)
+        {
+            
+        }
+
+        private void CheckInputEmail(object sender, TextCompositionEventArgs e)
+        {
+            
+        }
+
+        
+
+        private void TextBox_CheckTelephone(object sender, TextCompositionEventArgs e)
+        {
         }
     }
 }

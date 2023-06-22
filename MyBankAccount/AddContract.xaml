@@ -34,7 +34,7 @@
             <System:String>Loan</System:String>
             <System:String>Mortgage</System:String>
         </ComboBox>
-        <Button x:Name="Close" Content="Close" Grid.Row="4" Grid.Column="0" Height="25" Width="80" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="12,0,0,0"/>
+        <Button x:Name="Close" Content="Close" Grid.Row="4" Grid.Column="0" Height="25" Width="80" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="12,0,0,0" Click="CloseWindow_Click"/>
         <Button x:Name="Save" Content="Save" Grid.Row="4" Grid.Column="1" Click="AddContract_Click" Width="85" Height="25" Margin="0,0,0,0"/>
     </Grid>
 </Window>

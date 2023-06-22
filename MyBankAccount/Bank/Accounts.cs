@@ -6,10 +6,8 @@ namespace MyBankAccount.Bank
 {
     public abstract partial class Accounts : Customer
     {
-        
-
-        public abstract decimal CalculateInterest();
-        public abstract decimal AccruedInterest();
+        public abstract decimal CalculateInterest(decimal balance, decimal interestrate, int countOfMounth, string typeofcustomer);
+        public abstract decimal AccuredInterest(decimal balance, decimal interestrate, int countOfMounth, string typeofcustomer);
 
     }
 }

@@ -6,11 +6,13 @@ namespace MyBankAccount.Bank
 {
     public class Deposite : Accounts
     {
-        public decimal Withdrawals { get; protected set; }
+        
 
-        public override decimal CalculateInterest()
+        public override decimal CalculateInterest(decimal balance, decimal interestrate, int countOfMounth, string typeofcustomer)
         {
-
+            Ballance = balance;
+            InterestRate = interestrate;
+            CountOfMonth = countOfMounth;
             //Deposit accounts have no interest rate if their balance is positive and less than 1000
             if (Ballance > 0 && Ballance < 1000)
             {
@@ -18,14 +20,14 @@ namespace MyBankAccount.Bank
             }
             else
             {
-                Interest = InterestRate * NumberOfMonth;
+                Interest = InterestRate * CountOfMonth;
             }
             return Interest;
         }
 
-        public override decimal AccruedInterest()
+        public override decimal AccuredInterest(decimal balance, decimal interestrate, int countOfMounth, string typeofcustomer)
         {
-            return (CalculateInterest() * Ballance) / 100;
+            return (CalculateInterest(balance, interestrate, countOfMounth, typeofcustomer) * balance) / 100;
         }
     }
 }

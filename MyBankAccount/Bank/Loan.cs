@@ -4,28 +4,28 @@ using System.Text;
 
 namespace MyBankAccount.Bank
 {
-    class Loan : Accounts
+    public class Loan : Accounts
     {
-        public decimal Deposits { get; protected set; }
-        public string TypeOfAccount { get; set; }
-        public override decimal CalculateInterest()
+        //public decimal Deposits { get; protected set; }
+        //public string TypeOfAccount { get; set; }
+        public override decimal CalculateInterest(decimal balance, decimal interestrate, int countOfMounth, string typeofCustomer)
         {
+            Ballance = balance;
+            InterestRate = interestrate;
+            CountOfMonth = countOfMounth;
+            TypeOfCustomer = typeofCustomer;
+            
 
-
-            if ((NumberOfMonth >= 3 && TypeOfCustomer == "Individual") || (NumberOfMonth >= 2 && TypeOfCustomer == "Company"))
+            if ((CountOfMonth >= 3 && TypeOfCustomer == "Individual") || (CountOfMonth >= 2 && TypeOfCustomer == "Company"))
             {
-                Interest = InterestRate * NumberOfMonth;
+                Interest = InterestRate * CountOfMonth;
             }
             return Interest;
-
-
-
-
         }
 
-        public override decimal AccruedInterest()
+        public override decimal AccuredInterest(decimal balance, decimal interestrate, int countOfMounth, string typeofcustomer)
         {
-            return (CalculateInterest() * Ballance) / 100;
+            return (CalculateInterest(balance, interestrate, countOfMounth, typeofcustomer) * balance) / 100;
         }
     }
 }

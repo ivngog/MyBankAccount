@@ -15,7 +15,7 @@ using MyBankAccount.Bank;
 using System.Data.SqlClient;
 using System.Data;
 using System.Text.RegularExpressions;
-using System.Globalization;
+using MyBankAccount.BankOperations;
 
 namespace MyBankAccount
 {
@@ -25,6 +25,7 @@ namespace MyBankAccount
     public partial class AddContract : Window
     {
         protected int AccId { get; set; }
+        OpenContract openContract = new OpenContract();
         public AddContract(int accid)
         {
             
@@ -34,49 +35,28 @@ namespace MyBankAccount
 
         private void AddContract_Click(object sender, RoutedEventArgs e)
         {
-            InsertIntoContracts(AccId);
-            /*CultureInfo culture = new CultureInfo("en-US");
-            NumberFormatInfo nfi = new NumberFormatInfo() { NumberDecimalSeparator = "." };
-
-            Customer cust = new Customer();
-            cust.InterestRate = Convert.ToDecimal("22.22", culture);
-            cust.Ballance = Convert.ToDecimal("33.44", culture);
-            Lable.Content = Convert.ToDecimal("22.22", nfi) + " " + Convert.ToDecimal ("33.44", nfi);*/
-        }
-
-        protected void InsertIntoContracts(int AccountId)
-        {
-            CultureInfo culture = new CultureInfo("en-US");
-            Customer cust = new Customer();
-            cust.InterestRate = Convert.ToDecimal(InterestRate.Text.Trim(), culture);
-            cust.Ballance = Convert.ToDecimal(Balance.Text.Trim(), culture);
-            cust.Description = Description.SelectedItem.ToString();
-            string sql = $@"Insert into Contracts (BeginContract, EndContract, InterestRate, Balance, AccId, Description) values " + $"('{cust.ContractBeginDate}', 'null', {cust.InterestRate}, {cust.Ballance}, {AccountId}, '{cust.Description}')";
             try
             {
-                cust.OpenConnection();
-                using (SqlCommand command = new SqlCommand(sql, cust._sqlConnection))
-                {
-                    command.CommandType = CommandType.Text;
-                    command.ExecuteNonQuery();
-                    cust.CloseConnection();
-                    MessageBox.Show("Congratulation!");
-
-                    this.Close();
-                }
+                openContract.InsertIntoContracts(InterestRate.Text, Balance.Text, AccId, Description.SelectedItem.ToString());
+                this.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "error!");
+                MessageBox.Show(ex.Message);
             }
             
-
         }
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
+            
             Regex regex = new Regex("^[.][0-9]+$|^[0-9]*[.]{0,1}[0-9]*$");
             e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+        }
+
+        private void CloseWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -21,40 +21,34 @@
             </Style>
         </DockPanel.Resources>
 
-        <TabControl>
-            <TabItem x:Name="MainWin">
-                <TabItem.Header>
-                    <StackPanel Orientation="Horizontal" x:Name="MustBeHidden">
-                        <TextBlock x:Name="TB" Margin="0,0,0,0" Width="581" TextAlignment="Center" FlowDirection="LeftToRight" IsEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="0">My Bank Account</TextBlock>
-                    </StackPanel>
-                </TabItem.Header>
-
-                <Grid TextElement.FontSize="20" Width="Auto" Margin="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="0.3*"/>
-                        <RowDefinition Height="0.3*"/>
-                        <RowDefinition Height="0.3*"/>
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="Login" Margin="10" VerticalAlignment="Center" />
-
-                    <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,7,0" FontSize="20" Content="User Name"/>
-                    <TextBox x:Name="UsrName" Grid.Row="1" Grid.Column="2" Width="200" Height="30" HorizontalAlignment="Left" Margin="7, 0, 0, 0"/>
-                    <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,7,0" FontSize="20" Content="Password"/>
-                    <TextBox x:Name="Pswrd" Grid.Row="2" Grid.Column="2" Width="200" Height="30" HorizontalAlignment="Left" Margin="7, 0, 0, 0"/>
-                    <Button Name="Registration" Content="Register" Grid.Row="3" Grid.Column="0" Width="150" Height="35" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,7,0" Click="Registration_Click"/>
-                    <Button Name="Login" Content="Login" Grid.Row="3" Grid.Column="1" Width="150" Height="35" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="54,0,0,0" Click="Login_Click" />
+        <ContentControl x:Name="MainWin">
 
 
-                </Grid>
 
-            </TabItem>
-        </TabControl>
+            <Grid TextElement.FontSize="20" Width="Auto" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="Login" Margin="10" VerticalAlignment="Center" />
+
+                <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,7,0" FontSize="20" Content="User Name"/>
+                <TextBox x:Name="UsrName" Grid.Row="1" Grid.Column="2" Width="200" Height="30" HorizontalAlignment="Left" Margin="7, 0, 0, 0"/>
+                <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,7,0" FontSize="20" Content="Password"/>
+                <TextBox x:Name="Pswrd" Grid.Row="2" Grid.Column="2" Width="200" Height="30" HorizontalAlignment="Left" Margin="7, 0, 0, 0"/>
+                <Button Name="Registration" Content="Register" Grid.Row="3" Grid.Column="0" Width="150" Height="35" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,7,0" Click="Registration_Click"/>
+                <Button Name="Login" Content="Login" Grid.Row="3" Grid.Column="1" Width="150" Height="35" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="54,0,0,0" Click="Login_Click" />
+
+
+            </Grid>
+        </ContentControl>
 
     </DockPanel>
 </Window>

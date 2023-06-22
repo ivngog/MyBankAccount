@@ -16,7 +16,7 @@ namespace MyBankAccount.Sql
         public SqlConnection _sqlConnection = null;
         bool _disposed = false;
 
-        public SqlConn() : this(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=F:\Portfolio\MyBankAccount\MyBankAccount\MyBank.mdf;Integrated Security = True")
+        public SqlConn() : this(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=F:\Portfolio\MyBankAccount\MyBankAccount\Bank.mdf;Integrated Security = True")
         {
 
         }

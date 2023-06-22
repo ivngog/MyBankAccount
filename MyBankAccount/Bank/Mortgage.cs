@@ -4,32 +4,35 @@ using System.Text;
 
 namespace MyBankAccount.Bank
 {
-    class Mortgage : Accounts
+    public class Mortgage : Accounts
     {
         public decimal Deposits { get; protected set; }
-        public override decimal CalculateInterest()
+        public override decimal CalculateInterest(decimal balance, decimal interestrate, int countOfMounth, string typeofcustomer)
         {
-            if (NumberOfMonth < 12 && TypeOfCustomer == "Company")
+            Ballance = balance;
+            InterestRate = interestrate;
+            CountOfMonth = countOfMounth;
+            TypeOfCustomer = typeofcustomer;
+            if (CountOfMonth < 12 && TypeOfCustomer == "Company")
             {
-                Interest = (InterestRate * NumberOfMonth) / 2;
+                Interest = (InterestRate * CountOfMonth) / 2;
             }
-            if (NumberOfMonth > 12 && TypeOfCustomer == "Company")
+            if (CountOfMonth > 12 && TypeOfCustomer == "Company")
             {
-                Interest = InterestRate * NumberOfMonth;
+                Interest = InterestRate * CountOfMonth;
             }
-            else if (NumberOfMonth > 6 && TypeOfCustomer == "Individual")
+            else if (CountOfMonth > 6 && TypeOfCustomer == "Individual")
             {
-                Interest = InterestRate * NumberOfMonth;
+                Interest = InterestRate * CountOfMonth;
             }
             return Interest;
         }
         //Mortgage accounts have ½ the interest rate during the
         //first 12 months for companies and no interest rate during
         //the first 6 months for individuals. 
-        public override decimal AccruedInterest()
+        public override decimal AccuredInterest(decimal balance, decimal interestrate, int countOfMounth, string typeofcustomer)
         {
-            return (CalculateInterest() * Ballance) / 100;
-
+            return (CalculateInterest(balance, interestrate, countOfMounth, typeofcustomer) * balance) / 100;
         }
     }
 }

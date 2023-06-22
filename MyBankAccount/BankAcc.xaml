@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyBankAccount"
         mc:Ignorable="d"
-        Title="BankAcc" Height="450" Width="581">
+        Title="BankAcc" Height="450" Width="581" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+   
+
+
     <Grid x:Name="AccContent" Margin="0,0,0,0" Width="Auto" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
@@ -14,33 +17,36 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*" />
             <RowDefinition Height="10*"/>
 
         </Grid.RowDefinitions>
 
 
-        <Menu Grid.Row="0" Grid.ColumnSpan="2">
-            <MenuItem x:Name="AddContent" Width="52" Height="22" Header="File" Click="AddContract_click">Add contract</MenuItem>
-
+        <Menu x:Name="menu" Grid.Row="0" Grid.ColumnSpan="2">
+            <MenuItem x:Name="AddContent" Width="Auto" Height="22" Header="New contract" Click="AddContract_click"/>
+            <MenuItem x:Name="ShowContract" Width="Auto" Height="22" Header="Contracts"/>
         </Menu>
-        <TextBlock x:Name="CustName" Text="Customer" TextWrapping="Wrap" FontSize="20" Margin="10,0,0,0" Width="280" Grid.Column="0" Grid.Row="1" IsEnabled="False" Height="28" Padding="15,0,0,0" HorizontalAlignment="Left"/>
-        <TextBlock x:Name="Balance" Text="$" TextWrapping="Wrap" FontSize="15" Grid.Column="1" Grid.Row="1" Padding="0,0,0,0" Height="30" Width="Auto" HorizontalAlignment="Left"/>
 
-        
+
+        <TextBlock x:Name="CustName" Text="Customer" TextWrapping="Wrap" FontSize="20" Margin="10,0,0,0" Width="280" Grid.Column="0" Grid.Row="1" IsEnabled="False" Height="28" Padding="15,0,0,0" HorizontalAlignment="Left"/>
+        <TextBlock x:Name="Balance" Text="$" TextWrapping="Wrap" FontSize="15" Grid.Column="1" Grid.Row="1" Padding="15,0,0,0" Height="30" Width="Auto" HorizontalAlignment="Left" Margin="10,8,0,8"/>
+        <Button Name="f5"  Grid.Column="1" Grid.Row="1" Width="20" Height="20" Click="f5_Click" />
+
+
 
         <TextBlock x:Name="UserPhone" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Margin="0,6,0,7" Text="5229C269013" TextWrapping="Wrap" Height="30" Width="270" FontSize="18" Padding="15,0,0,0"/>
-         <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Margin="0,7,0,10"  x:Name="Email" Text="Mail" TextWrapping="Wrap" FontSize="18" Width="272" Padding="15,0,0,0"/>
-        
+        <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Margin="0,7,0,10"  x:Name="Email" Text="Mail" TextWrapping="Wrap" FontSize="18" Width="272" Padding="15,0,0,0"/>
+
         <TextBlock Grid.Row="3" HorizontalAlignment="Left" Margin="8,4,0,6" Text="Type of account:" TextWrapping="Wrap" FontSize="18"  Width="270" Padding="15,0,0,0"/>
         <TextBlock x:Name="TypeOfCust" Grid.Row="3" HorizontalAlignment="Center" Margin="0,4,0,6" Text="Type" TextWrapping="Wrap" FontSize="18"  Width="272" Grid.Column="1" Padding="15,0,0,0"/>
 
         <TextBlock Grid.Row="4" HorizontalAlignment="Center" Margin="0,5,0,6" Text="Date of registration:" TextWrapping="Wrap" FontSize="18" FontFamily="Segoe UI" Width="270" Padding="15,0,0,0"/>
         <TextBlock x:Name="DateOfReg" Grid.Row="4" HorizontalAlignment="Center" Margin="0,4,0,6" Text="accuredInterest" TextWrapping="Wrap" TextAlignment="Left" FontSize="18" Height="auto" Width="272" Grid.Column="1" Padding="15,0,0,0"/>
-        
+        <ContentControl x:Name="Contracts" Grid.Row="5" Grid.ColumnSpan="2"/>
 
 
 

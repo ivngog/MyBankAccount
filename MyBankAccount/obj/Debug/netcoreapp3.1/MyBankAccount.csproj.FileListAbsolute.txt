@@ -19,7 +19,6 @@ F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\MyBankAccount.p
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\MyBankAccount.genruntimeconfig.cache
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\RegisterForm.g.cs
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\RegisterForm.baml
-F:\Portfolio\MyBankAccount\MyBankAccount\bin\Debug\netcoreapp3.1\MyBankAccount.dll.config
 F:\Portfolio\MyBankAccount\MyBankAccount\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 F:\Portfolio\MyBankAccount\MyBankAccount\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 F:\Portfolio\MyBankAccount\MyBankAccount\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
@@ -32,3 +31,5 @@ F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\BankAcc.baml
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\AddContract.g.cs
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\AddContract.baml
 F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\MyBankAccount.csproj.AssemblyReference.cache
+F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\ShowMeContractOnTheWindow.g.cs
+F:\Portfolio\MyBankAccount\MyBankAccount\obj\Debug\netcoreapp3.1\ShowMeContractOnTheWindow.baml

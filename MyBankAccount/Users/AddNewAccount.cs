@@ -22,7 +22,7 @@ namespace MyBankAccount.Users
 
         public void AddAccount(int Id)
         {
-            string sql = $@"insert into accounts (CustId) values (" + $"'{Id}')";
+            string sql = $@"insert into accounts (CustId, Balance) values (" + $"'{Id}', 0)";
             try
             {
 
@@ -71,6 +71,8 @@ namespace MyBankAccount.Users
 
            
         }
+
+        
 
     }
 
